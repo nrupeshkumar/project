@@ -272,7 +272,7 @@ body {
 align-items: center;
 justify-content: center;
 height: 50vh;
-    overflow: visible;
+    overflow-x: auto;
         width: 100%;
         background-color: #aaa;
 
