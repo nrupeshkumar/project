@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden ;
+    position: relative;
+   
+}
+
+/* Background Circle Animation */
+.background-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgb(255, 247, 247), #4e4c4c);
+
+   
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Page Transition Effect */
+.page-transition {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+
+    background: radial-gradient(circle, #ff4b1f, #d87676);
+   
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+    display: ;
+}
+
+/* Content Styling */
+.container {
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: ;
+    transform: translateY(20px);
+color: rgb(139, 126, 126);
+;
+}
+
+p {
+    font-size: 1.2rem;
+    opacity: ;
+    transform: translateY(20px);
+
+}
+
+/* Button Styling */
+.btn {
+    background: linear-gradient(45deg, #ff4b1f, #ff9068);
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff6b3f, #ffb199);
+    background: #1abc9c;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.delay {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

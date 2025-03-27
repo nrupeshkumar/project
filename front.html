@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="./css/front.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- <div class="background-circle"></div>
+    <div class="page-transition"> -->
+       
+    </div>
+    <div class="btn-container"> 
+    <a href="hero.html"><button class="btn fade-in delay">go Back</button></a>
+    <!-- <button class="menu-btn"><i class="fas fa-bars"></i></button> -->
+    <!-- <button style="z-index: 11;" class="menu-btn"><i class="fas fa-bars"></i></button> -->
+    </div>
+        <div class="content">
+          <div class="sidebar">
+            <ul class="nav-links">
+                <li>
+                    <a href="#" class="tooltip">
+                        <span class="tooltip-text">Home</span>
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="tooltip">
+                        <span class="tooltip-text">about</span>
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="tooltip">
+                        <span class="tooltip-text">skills</span>
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="tooltip">
+                        <span class="tooltip-text">resume</span>
+                        <i class="fa-solid fa-file-alt"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="tooltip">
+                        <span class="tooltip-text">contact</span>
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Toggle Button (Outside Sidebar) -->
+        <button class="menu-btn"><i class="fas fa-bars"></i></button>
+        
+
+    </div>
+        
+        <!-- /hero section -->
+        <div class="section1">
+            <div class="innersec1">
+                <div class="hero">
+                    <h2>hi i am <span style="color: #1abc9c;">rupesh</span></h2>
+                    <p class="typing"></p>
+                    <a href="#portfolio" class="hero-btn">View Portfolio</a>
+                </div>
+                </div>
+        
+            <div class="innersec2">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player class="dotlottie-player" src="https://lottie.host/98a2916b-1323-43bc-9755-2ddbe560172d/PYpwjHKPrE.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+            </div>
+            </div>
+         <!-- section end -->
+        
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script
+    src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+    type="module"
+  ></script>
+    <script src="./js/front.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    
+    gsap.to(".background-circle", {
+        duration: 1.5,
+        width: "105vw",
+        height: "300vw",
+        ease: "power2.out"
+    });
+
+    // Page Load Transition Effect
+    gsap.to(".page-transition", {
+        duration: 1.5,
+        scale: 0,
+        ease: "power2.out"
+    });
+});
+
+document.getElementById("nextPage").addEventListener("click", () => {
+    // Page Exit Animation
+    gsap.to(".page-transition", {
+        duration: 1,
+        scale: 3,
+        ease: "power2.in",
+        onComplete: () => {
+            window.location.href = "front.html"; // Navigate after animation
+        }
+    });
+});
+
+const toggleButton = document.getElementById("toggle-button");
+const sidebar = document.getElementById("sidebar");
+
+const openIcon = toggleButton.querySelector(".bxs-right-arrow");
+const closeIcon = toggleButton.querySelector(".bxs-left-arrow");
+
+closeIcon.style.display = "none";
+
+toggleButton.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+
+  if (sidebar.classList.contains("active")) {
+    openIcon.style.display = "none";
+    closeIcon.style.display = "block";
+  } else {
+    openIcon.style.display = "block";
+    closeIcon.style.display = "none";
+  }
+});
+
+    </script>
+
+
+</body>
+</html>
